@@ -187,6 +187,10 @@
       },
       onInput (value) {
         this.$emit('input', value)
+        
+        if(this.searchTerm === null || this.searchTerm === undefined){
+          return
+        }
 
         if (!this.mdOpenOnFocus) {
           this.showOptions()
